@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HG Soluções e Inovações</title>
+</head>
+<body style="font-family:system-ui,sans-serif;padding:24px;color:#0E1A3B">
+<p id="msg">A abrir...</p>
+<script>
+/* GitHub Pages: um link como .../verify?code=XYZ não existe como ficheiro.
+   Esta página reencaminha para o site principal mantendo o código. */
+(function () {
+  var p = location.pathname;
+  if (/\/verify\/?$/.test(p)) {
+    location.replace(p.replace(/\/verify\/?$/, "/") + location.search + location.hash);
+    return;
+  }
+  document.getElementById("msg").innerHTML = 'Página não encontrada. <a href="./">Voltar ao site</a>';
+})();
+</script>
+</body>
+</html>
